@@ -1,0 +1,25 @@
+pipeline {
+    agent any 
+    Stages {
+        stage ("git checkout")
+        {
+        step {
+            echo "this is git stage"
+        }
+        }
+
+        stage ("install dependencies")
+        {
+        step {
+            echo "this is git stage"
+        }
+        }
+        stage ("building docker images")
+        {
+        step {
+            echo "this is git stage"
+        }
+        }
+
+    }
+}
