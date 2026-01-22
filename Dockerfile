@@ -1,10 +1,12 @@
-FROM python:3.12-slim
+FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY hello.py .
-COPY test_hello.py .
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install pytest
+COPY hello.py .
+
+EXPOSE 5000
 
 CMD ["python", "hello.py"]
